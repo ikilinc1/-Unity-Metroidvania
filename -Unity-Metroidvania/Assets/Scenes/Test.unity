@@ -3558,6 +3558,36 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &831050343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 831050344}
+  m_Layer: 8
+  m_Name: ShotPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &831050344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831050343}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.16, y: 0.14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1549174945}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1085211739
 GameObject:
   m_ObjectHideFlags: 0
@@ -3567,7 +3597,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1085211740}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundCheckPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3599,7 +3629,7 @@ GameObject:
   - component: {fileID: 1549174945}
   - component: {fileID: 1549174946}
   - component: {fileID: 1549174947}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3619,6 +3649,7 @@ Transform:
   m_Children:
   - {fileID: 1637844565}
   - {fileID: 1085211740}
+  - {fileID: 831050344}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3663,6 +3694,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   anim: {fileID: 1637844568}
+  shotToFire: {fileID: 8062143846685322723, guid: 91c8de98285d85441b963e659d8560af, type: 3}
+  shotPoint: {fileID: 831050344}
 --- !u!1 &1637844564
 GameObject:
   m_ObjectHideFlags: 0
@@ -3675,7 +3708,7 @@ GameObject:
   - component: {fileID: 1637844567}
   - component: {fileID: 1637844566}
   - component: {fileID: 1637844568}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StandingSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
