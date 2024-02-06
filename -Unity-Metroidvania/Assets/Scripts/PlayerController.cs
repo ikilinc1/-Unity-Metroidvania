@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     public float waitAfterDashing;
     public GameObject standing, ball;
     public float waitToBall;
+    public Transform bombPoint;
+    public GameObject bomb;
     
     private bool isOnGround;
     private bool canDoubleJump;
@@ -102,9 +104,16 @@ public class PlayerController : MonoBehaviour
         // Shooting
         if (Input.GetButtonDown("Fire1"))
         {
-            Instantiate(shotToFire, shotPoint.position, shotPoint.rotation).moveDir =
-                new Vector2(transform.localScale.x, 0f);
-            anim.SetTrigger("shotFired");
+            if (standing.activeSelf)
+            {
+                Instantiate(shotToFire, shotPoint.position, shotPoint.rotation).moveDir =
+                                new Vector2(transform.localScale.x, 0f);
+                            anim.SetTrigger("shotFired");
+            }
+            else if (ball.activeSelf)
+            {
+                Instantiate(bomb, bombPoint.position, bombPoint.rotation);
+            }
         }
 
         // Ball Mode
